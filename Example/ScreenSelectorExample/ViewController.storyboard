@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vEp-QQ-9wl">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XY9-qe-ONn">
+            <objects>
+                <viewController id="vEp-QQ-9wl" customClass="ViewController" customModule="ScreenSelectorExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f5Y-uj-IJF"/>
+                        <viewControllerLayoutGuide type="bottom" id="N8p-7n-Akt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kJo-FK-pr7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScreenSelectorView Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuO-JX-7gD">
+                                <rect key="frame" x="180" y="290" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0cO-1N-efn"/>
+                                    <constraint firstAttribute="width" constant="240" id="O8u-ee-Wpp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wre-Lb-Qzh" customClass="ScreenSelectorView" customModule="ScreenSelector">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="previewVerticalOffset">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="previewReflectionEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wre-Lb-Qzh" secondAttribute="trailing" id="2hI-JY-VAf"/>
+                            <constraint firstItem="wre-Lb-Qzh" firstAttribute="leading" secondItem="kJo-FK-pr7" secondAttribute="leading" id="CfL-0b-Nr3"/>
+                            <constraint firstItem="wuO-JX-7gD" firstAttribute="centerX" secondItem="kJo-FK-pr7" secondAttribute="centerX" id="HL6-hP-ztk"/>
+                            <constraint firstItem="N8p-7n-Akt" firstAttribute="top" secondItem="wre-Lb-Qzh" secondAttribute="bottom" id="Noa-li-oeX"/>
+                            <constraint firstItem="wre-Lb-Qzh" firstAttribute="top" secondItem="kJo-FK-pr7" secondAttribute="top" id="ho0-9c-tAk"/>
+                            <constraint firstItem="wuO-JX-7gD" firstAttribute="centerY" secondItem="kJo-FK-pr7" secondAttribute="centerY" id="jCe-1M-j5B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="screenSelectorView" destination="wre-Lb-Qzh" id="Fmb-Xj-fil"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpy-6h-DKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="469"/>
+        </scene>
+    </scenes>
+</document>
